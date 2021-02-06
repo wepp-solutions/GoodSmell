@@ -17,67 +17,52 @@ export const Header = styled.div`
   height: 40%;
   padding: 5% 0;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
-
-  > p:nth-child(1) {
-    font-size: clamp(1.7rem, 5vw, 2.4rem);
-    font-weight: 600;
-    color: #444;
-    max-width: 300px;
-    margin: 0 auto;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #333;
-  }
-  > p:nth-child(2) {
-    font-size: clamp(1rem, 5vw, 1.5rem);
-    font-weight: lighter;
-    color: #666;
-    max-width: 800px;
-  }
-`
+`;
 export const Footer = styled.div`
-  position: relative;
   width: 100%;
-  height: 600px;
-  .img {
-    filter: brightness(50%);
+
+  div {
+    display: flex;
+    width: 100%;
+    margin-top: 2px;
+    gap: 5px;
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
   }
-`
-export const Texts = styled.div`
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-
-
+`;
+export const TextsHeader = styled.div`
+  color: #333;
   > p:nth-child(1) {
-    font-size: clamp(1.7rem, 5vw, 2.4rem);
+    font-size: clamp(1.7rem, 5vw, 2.2rem);
     font-weight: 900;
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin: 10px 0;
   }
   > p:nth-child(2) {
-    font-size: clamp(1rem, 5vw, 1.5rem);
+    font-size: clamp(1rem, 5vw, 1.2rem);
     font-weight: 300;
     margin: 10px auto;
     max-width: 700px;
   }
-  button {
-    padding: 15px 25px;
-    background: transparent;
-    border: 2px solid #eee;
-    color: #eee;
-    border-radius: 25px;
-    margin-top: 30px;
-    font-size: 20px;
-    font-weight: 600;
+`;
+export const ImageBox = styled.div`
+  position: relative;
+  width: 150px;
+  height: 150px;
 
-    :hover {
-      background: #eee;
-      color: #333;
-      cursor: pointer;
-    }
+  .img {
+    border-radius: 100px;
   }
-`
+`;
+export const Card = styled.div`
+  position: relative;
+  width: min(400px, 100%);
+  height: 400px;
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+`;

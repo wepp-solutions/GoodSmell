@@ -6,18 +6,6 @@ import { Container, Header, WrapperCards, Card } from "./styles";
 export default function Team() {
   return (
     <Container>
-      <Header>
-        <Image
-          src="https://images.pexels.com/photos/4590940/pexels-photo-4590940.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-          priority
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          className="img"
-        />
-        <p>Nossas Cozinhas</p>
-      </Header>
-
       <WrapperCards>
         <Card>
           <p>Laura Martins</p>
